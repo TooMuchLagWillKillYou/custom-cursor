@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  height: 3000px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cursor {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+}
+
+.hover {
+  width: 200px;
+  height: 300px;
+  background-color: cadetblue;
+  margin: auto;
+}
+
+@keyframes expandCursor {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(10);
+  }
+}
+
+@keyframes shrinkCursor {
+  0% {
+      transform: scale(10);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.expand {
+  animation: expandCursor .5s forwards;
+}
+
+.shrink {
+  animation: shrinkCursor .5s forwards;
+}
